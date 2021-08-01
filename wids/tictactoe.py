@@ -1,6 +1,7 @@
 from itertools import permutations as per
 from wids.score import Score
 
+
 class TicTacToe:
     player_moves1 = []
     player_moves2 = []
@@ -25,9 +26,11 @@ class TicTacToe:
         # ob einer der Spieler einen Winning- Cases erreicht hat
         for case in winning_cases:
             for combination in list(per(lista, len(lista))):
-                for case2 in list(per(case, len(case2))):
+                for case2 in list(per(case, len(case))):
                     if list(combination) == list(case2):
                         return True
+                    else:
+                        pass
         return False
 
     def tie(self):

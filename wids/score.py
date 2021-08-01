@@ -4,13 +4,14 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 
+
 class Score(Popup):
-    winnner = ''
+    winner = ''
     mode = ''
 
     def __init__(self, winner, app, mode, **kwargs):
         super(Score, self).__init__(**kwargs)
-        self.winnner = winner
+        self.winner = winner
         self.app = app
         self.mode = mode
         # Titel und Position
@@ -41,8 +42,8 @@ class Score(Popup):
         self.add_widget(self.float)
 
     def get_txt(self):
-        if self.winnner != '' and self.winnner != 'tie':
-            txt = f'{self.winnner} hat gewonnen!'
+        if self.winner != '' and self.winner != 'tie':
+            txt = f'{self.winner} hat gewonnen!'
         else:
             txt = 'Unentschieden!'
         return txt
